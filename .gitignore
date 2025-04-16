@@ -7,10 +7,11 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/Dotnet.gitignore
 .vscode/
+.vs
 *.config
 *.csproj.vspscc
 Properties/
-
+*csproj.user
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
