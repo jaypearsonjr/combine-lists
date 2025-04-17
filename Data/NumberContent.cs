@@ -1,12 +1,13 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CombineLists.Data
 {
-    public class LetterContent : IContent
+    public class NumberContent : IContent
     {
         private List<object> _contents;
 
-        public LetterContent()
+        public NumberContent()
         {
             Hydrate();
         }
@@ -16,9 +17,10 @@ namespace CombineLists.Data
             return _contents;
         }
 
-        public int Add(string item)
+        public int Add(int item)
         {
             _contents.Add(item);
+
             return _contents.Count;
         }
 
@@ -27,8 +29,10 @@ namespace CombineLists.Data
             if (index >= 0 && index < _contents.Count)
             {
                 _contents.RemoveAt(index);
+
                 return _contents.Count;
             }
+
             return -1; // Return -1 if the index is invalid
         }
 
@@ -36,7 +40,7 @@ namespace CombineLists.Data
         {
             _contents = new List<object>
             {
-                "a", "b", "c", "d"
+                1, 2, 3, 4
             };
         }
     }
